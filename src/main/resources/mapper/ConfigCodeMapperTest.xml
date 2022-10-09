@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.ConfigCodeMapperTest">
+    <select id="queryAll"  resultType="com.example.demo.entity.ConfigCodeTest">
+        select
+            code_name
+        from config_code
+    </select>
+    <select id="queryById"  resultType="com.example.demo.entity.ConfigCodeTest">
+        select
+            *
+        from config_code where code_no = ${codeNo}
+    </select>
+    <select id="selectTest" resultType="com.example.demo.entity.ConfigCodeTest">
+        select
+            *
+        from config_code where 1=1 ${ew.SqlSegment}
+    </select>
+    <delete id="deleteTest" parameterType="String">
+        delete from config_code where 1=1 ${ew.SqlSegment}
+    </delete>
+</mapper>

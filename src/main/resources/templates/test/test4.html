@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmls:th="http://www.thymeleaf.org" xmlns:xmls="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>显示</title>
+</head>
+<body>
+<form action="/test/test4" method="get">
+<span th:text="${list1}"> </span>
+</form>
+<form action="/test/test6" method="post">
+    <input type="text" name="code_no">
+    <br>
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>
